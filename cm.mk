@@ -12,6 +12,10 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/samsung/delos3geur/delos3geur.mk)
 
+# Web Rendering
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.webview.provider=classic
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := delos3geur
 PRODUCT_NAME := cm_delos3geur
